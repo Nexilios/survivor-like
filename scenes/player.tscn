@@ -6,10 +6,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vjss"]
 radius = 31.0161
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
+platform_floor_layers = 0
 script = ExtResource("1_3j00y")
 
 [node name="HappyBoo" parent="." instance=ExtResource("1_1u3s1")]
+unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3vjss")
