@@ -15,4 +15,4 @@ func take_damage():
 	%Slime.play_hurt()
 	
 	if health_component:
-		health_component.take_damage()
+		health_component.take_damage(1.0)
