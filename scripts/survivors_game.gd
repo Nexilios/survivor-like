@@ -11,3 +11,12 @@ func spawn_mob() -> void:
 func _on_timer_timeout() -> void:
 	spawn_mob()
 	%SpawnTimer.wait_time = randf_range(0.5, 2)
+
+func _on_player_health_depleted() -> void:
+	%GameOver.visible = true
+	
+	get_tree().paused = true
+	await get_tree().create_timer(3.0).timeout
+	
+	get_tree().paused = false
+	get_tree().reload_current_scene()
