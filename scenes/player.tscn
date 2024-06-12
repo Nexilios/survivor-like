@@ -35,6 +35,8 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_component")]
+z_index = 1
+y_sort_enabled = true
 platform_floor_layers = 0
 script = ExtResource("1_3j00y")
 health_component = NodePath("HealthComponent")
